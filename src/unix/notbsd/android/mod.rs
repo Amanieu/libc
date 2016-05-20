@@ -543,6 +543,8 @@ extern {
                        sevlen: ::size_t,
                        flags: ::c_int) -> ::c_int;
     pub fn ptrace(request: ::c_int, ...) -> ::c_long;
+    pub fn getpriority(which: ::c_int, who: ::c_int) -> ::c_int;
+    pub fn setpriority(which: ::c_int, who: ::c_int, prio: ::c_int) -> ::c_int;
 }
 
 cfg_if! {
